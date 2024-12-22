@@ -1,0 +1,206 @@
+/* Base Colors */
+:root {
+  --solar-yellow: #ffb81c; /* Bright Solar Yellow */
+  --sky-blue: #00a9e0; /* Fresh Sky Blue */
+  --fresh-green: #4caf50; /* Fresh Green */
+  --charcoal-gray: #333333; /* Dark Gray for text */
+  --off-white: #f5f5f5; /* Soft Off-White Background */
+  --white: #ffffff; /* Pure White */
+  --light-gray: #e0e0e0; /* Light Gray for borders and dividers */
+  --light-orange: #ff7043; /* Muted Orange for hover effects */
+  --deep-blue: #003366; /* Deep Blue for headers or footers */
+  --dark-green: #2c6e49; /* Dark Green for secondary buttons */
+  --sky-gray: #d1e2f0; /* Light Sky Gray for section backgrounds */
+  --hover-blue: #007bff; /* Hover effect for buttons and links */
+  --hover-yellow: #ff9f1c; /* Soft Hover Yellow */
+  --hover-gray: #a3a3a3; /* Hover Gray for buttons */
+  --primary-text: #333333; /* Dark text for body */
+  --secondary-text: #666666; /* Lighter gray text for secondary content */
+  --highlight-text: #ffb81c; /* Solar Yellow for highlighted text */
+  --main-bg: #f5f5f5; /* Main light background */
+  --section-bg: #ffffff; /* White background for sections */
+  --footer-bg: #333333; /* Dark footer background */
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+/* Global Body Styles */
+body {
+  background-color: var(--main-bg);
+  color: var(--primary-text);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Customization */
+.navbar-custom {
+  background-color: var(--sky-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand-custom {
+  color: var(--solar-yellow);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link-custom {
+  color: var(--white);
+  font-weight: 500;
+  padding: 15px 20px;
+}
+
+.navbar-nav .nav-link-custom:hover {
+  color: var(--light-orange);
+  transition: color 0.3s ease;
+}
+
+.navbar-toggler {
+  border: 1px solid var(--solar-yellow);
+}
+
+.navbar-toggler-icon {
+  background-color: var(--solar-yellow);
+}
+
+/* Section Styling */
+.section-custom {
+  background-color: var(--section-bg);
+  padding: 60px 20px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.section-header {
+  font-size: 2.5rem;
+  color: var(--charcoal-gray);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Footer Customization */
+.footer-custom {
+  background-color: var(--footer-bg);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-custom p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Button Styling */
+.btn-custom {
+  background-color: var(--fresh-green);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--light-orange);
+  transform: scale(1.05);
+}
+
+/* Links */
+.link-custom {
+  color: var(--sky-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-custom:hover {
+  color: var(--hover-blue);
+}
+
+/* Divider */
+.divider {
+  border-top: 1px solid var(--light-gray);
+  margin: 40px 0;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  /* background-color: var(--light-gray); */
+  color: var(--charcoal-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  background: url("/public/images/banner-4.jpg") no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background-position: cover;
+  background-attachment: fixed;
+  transform: translateZ(-1px);
+  -webkit-transform: translateZ(-1px);
+  -moz-transform: translateZ(-1px);
+  -ms-transform: translateZ(-1px);
+  -o-transform: translateZ(-1px);
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--solar-yellow);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: var(--charcoal-gray);
+}
+
+.btn-hero {
+  background-color: var(--solar-yellow);
+  color: var(--charcoal-gray);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-hero:hover {
+  background-color: var(--light-orange);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: var(--charcoal-gray);
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--solar-yellow);
+}
