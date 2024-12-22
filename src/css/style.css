@@ -137,7 +137,7 @@ body {
 }
 
 .hero-bg {
-  background: url("./public/images/banner-4.jpg") no-repeat;
+  background: url("../../public/images/banner-4.jpg") no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -203,4 +203,66 @@ body {
 
 .social-icon:hover {
   color: var(--solar-yellow);
+}
+
+/* Services Section */
+.services-section {
+  background-color: var(--light-gray);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--solar-yellow);
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.icon-container {
+  background-color: var(--solar-yellow);
+  padding: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--charcoal-gray);
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--charcoal-gray);
+}
+
+.card-text {
+  font-size: 1rem;
+  color: var(--charcoal-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
 }
