@@ -137,7 +137,7 @@ body {
 }
 
 .hero-bg {
-  background: url("/public/images/banner-4.jpg") no-repeat;
+  background: url("./public/images/banner-4.jpg") no-repeat;
   position: absolute;
   top: 0;
   left: 0;
