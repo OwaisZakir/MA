@@ -1,89 +1,115 @@
-// Combine everything inside a single window.onload
-window.onload = () => {
-  // GSAP Animations for Navbar
-  gsap.from(".navbar-custom", {
-    duration: 1.5,
-    y: -100,
-    opacity: 0,
-    ease: "power3.out",
-  });
-
-  // GSAP Animations for the hero section
-  gsap.from(".hero-title", {
-    duration: 1.5,
-    x: -200,
-    opacity: 0,
-    ease: "power3.out",
-  });
-
-  gsap.from(".hero-subtitle", {
-    duration: 1.5,
-    x: 200,
-    opacity: 0,
-    ease: "power3.out",
-    delay: 0.5,
-  });
-
-  gsap.from(".btn-hero", {
+// GSAP Animations
+document.addEventListener("DOMContentLoaded", function () {
+  // Navbar Animations
+  gsap.from(".navbar-brand", {
     duration: 1,
+    opacity: 0,
+    x: -100,
+    ease: "power2.out",
+  });
+  gsap.from(".navbar-nav .nav-link", {
+    duration: 1,
+    opacity: 0,
+    y: -50,
+    ease: "power2.out",
+    stagger: 0.2,
+  });
+  gsap.from(".search-bar", {
+    duration: 1,
+    opacity: 0,
+    x: 100,
+    ease: "power2.out",
+  });
+  gsap.from(".sign-in-btn", {
+    duration: 1,
+    opacity: 0,
+    x: 100,
+    ease: "power2.out",
+  });
+
+  // Hero Section Animations
+  gsap.from(".hero-title", { opacity: 0, y: -50, duration: 1, delay: 0.3 });
+  gsap.from(".hero-subtitle", { opacity: 0, y: 50, duration: 1, delay: 0.6 });
+  gsap.from(".btn-home", {
+    opacity: 0,
     scale: 0.8,
-    opacity: 0,
-    ease: "back.out(1.7)",
+    duration: 1,
     delay: 1,
+    ease: "bounce.out",
   });
-
-  gsap.from(".social-icon", {
-    duration: 1.5,
-    y: 50,
+  gsap.from(".image-placeholder", {
     opacity: 0,
-    stagger: 0.3,
-    ease: "power3.out",
-    delay: 1.5,
+    scale: 0.8,
+    duration: 1,
+    delay: 1.3,
+    stagger: 0.2,
   });
 
-  // Parallax effect for the background image
-  window.addEventListener("scroll", () => {
-    let offset = window.pageYOffset;
-    document.querySelector(".hero-bg").style.transform = `translateY(${offset * 0.3}px)`;
+  // Hero Content Animations
+  gsap.from(".hero-content h1", {
+    duration: 1.5,
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+  });
+  gsap.from(".hero-content p", {
+    duration: 1.5,
+    y: 100,
+    opacity: 0,
+    delay: 0.3,
+    ease: "power4.out",
+  });
+  gsap.from(".btn-home", {
+    duration: 1.5,
+    y: 100,
+    opacity: 0,
+    delay: 0.6,
+    ease: "power4.out",
+  });
+  gsap.from(".hero-images img", {
+    duration: 1.5,
+    y: 100,
+    opacity: 0,
+    stagger: 0.2,
+    delay: 0.9,
+    ease: "power4.out",
   });
 
-  // Animation for button hover: pulse effect
-  const heroButton = document.querySelector(".btn-hero");
-  heroButton.addEventListener("mouseover", () => {
-    gsap.to(heroButton, { scale: 1.1, duration: 0.3, ease: "power1.inOut" });
+  // Parallax Effect for Background Image
+  gsap.to(".hero-overlay", {
+    scrollTrigger: {
+      trigger: ".hero-section",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+    backgroundPosition: "50% 100%",
+    ease: "power1.inOut",
   });
 
-  heroButton.addEventListener("mouseout", () => {
-    gsap.to(heroButton, { scale: 1, duration: 0.3, ease: "power1.inOut" });
+  // Parallax effect for the hero section (slight scale effect)
+  gsap.to(".hero-section", {
+    scrollTrigger: {
+      trigger: ".hero-section",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+    scale: 1.05,
+    ease: "power1.inOut",
   });
 
-  // GSAP Animation for Service Cards
-  gsap.from(".service-card", {
-    duration: 1.2,
+  // Fade-in effect for images in hero section as they scroll into view
+  gsap.from(".hero-images img", {
+    scrollTrigger: {
+      trigger: ".hero-images",
+      start: "top 75%",
+      end: "bottom 25%",
+      scrub: 1,
+    },
     opacity: 0,
     y: 50,
     stagger: 0.2,
-    ease: "power3.out",
+    ease: "power2.out",
   });
-
-  // Hover animation effect for service icons
-  const icons = document.querySelectorAll(".service-icon");
-  icons.forEach((icon) => {
-    icon.addEventListener("mouseover", () => {
-      gsap.to(icon, { scale: 1.2, duration: 0.3 });
-    });
-    icon.addEventListener("mouseout", () => {
-      gsap.to(icon, { scale: 1, duration: 0.3 });
-    });
-  });
-
-  // Smooth Scrolling for navigation links
-  document.querySelectorAll("a.nav-link-custom").forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-  });
-};
+});

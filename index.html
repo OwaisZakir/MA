@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website for DC Electronics and Solar Installations</title>
 
-    <!-- FontAwesome Icons (Latest version) -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-
     <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -24,165 +19,86 @@
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
-    <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-      <div class="container-fluid">
-        <!-- Brand Logo or Name -->
-        <a class="navbar-brand navbar-brand-custom" href="#">MA SOLAR ENERGY</a>
-
-        <!-- Toggle Button for Mobile View -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link nav-link-custom active"
-                aria-current="page"
-                href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-custom" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" width="40" height="40" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input
+            class="form-control search-bar"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn sign-in-btn ms-2" type="button">Sign In</button>
+        </form>
       </div>
     </nav>
-    <section class="hero-section">
-      <!-- Parallax Background Image -->
-      <div class="hero-bg"></div>
 
-      <div class="container">
-        <div
-          class="row align-items-center justify-content-center text-center text-md-start"
-        >
-          <div class="col-12 col-md-7">
-            <h1 class="hero-title">Harness the Power of Solar Energy</h1>
-            <p class="hero-subtitle">
-              Your trusted expert in DC electronics and solar installations
-            </p>
-            <a href="#contact" class="btn btn-hero">Get in Touch</a>
-          </div>
-          <!-- Social Media Links -->
-          <div class="col-12 col-md-5">
-            <div class="social-icons">
-              <a href="#" class="social-icon" title="Facebook"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-icon" title="Twitter"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" class="social-icon" title="LinkedIn"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="social-icon" title="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </div>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Harness the Power of the Sun</h1>
+        <p class="hero-subtitle">
+          Leading experts in solar installations and AC/DC solutions. Experience
+          unparalleled efficiency and savings with our cutting-edge technology.
+        </p>
+        <a href="#" class="btn btn-home">Learn More</a>
+        <div class="hero-images">
+          <img
+            src="https://demo.casethemes.net/solarva/wp-content/uploads/2024/08/image10-278x331.webp"
+            alt="Solar Installation"
+          />
+          <img
+            src="https://source.unsplash.com/300x400/?solar-energy"
+            alt="Solar Panels"
+          />
+          <img
+            src="https://source.unsplash.com/300x400/?solar-power"
+            alt="Solar Power"
+          />
         </div>
       </div>
     </section>
 
-    <section id="services" class="services-section py-5">
-      <div class="container">
-        <h2 class="section-title text-center mb-5">Our Services</h2>
-        <div class="row">
-          <!-- Service Card 1 -->
-          <div class="col-12 col-md-4 mb-4 service-card">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="icon-container">
-                  <i class="fas fa-solar-panel service-icon"></i>
-                </div>
-                <h4 class="card-title">Solar Panel Installation</h4>
-                <p class="card-text">
-                  We offer high-quality solar panel installations for
-                  residential and commercial properties to harness the power of
-                  the sun efficiently.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service Card 2 -->
-          <div class="col-12 col-md-4 mb-4 service-card">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="icon-container">
-                  <i class="fas fa-bolt service-icon"></i>
-                </div>
-                <h4 class="card-title">Inverter Services</h4>
-                <p class="card-text">
-                  Expert inverter installation and repair services to ensure
-                  your solar system operates at optimal efficiency.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service Card 3 -->
-          <div class="col-12 col-md-4 mb-4 service-card">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="icon-container">
-                  <i class="fas fa-plug service-icon"></i>
-                </div>
-                <h4 class="card-title">DC Electronics Repair</h4>
-                <p class="card-text">
-                  Specialized in DC electronics repair and maintenance to keep
-                  your system running smoothly and reliably.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section-custom" id="projects">
-      <h2 class="section-header">Our Projects</h2>
-      <p>Showcasing past projects and installations.</p>
-      <!-- Content here -->
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section-custom" id="contact">
-      <h2 class="section-header">Contact Us</h2>
-      <p>Contact details and form.</p>
-      <!-- Content here -->
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer-custom">
-      <p>&copy; 2024 Your Business Name. All rights reserved.</p>
-    </footer>
+    <section style="height: 100vh; width: 100vw"></section>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- GSAP for Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
 
     <!-- Custom JS -->
     <script src="./src/js/app.js"></script>
