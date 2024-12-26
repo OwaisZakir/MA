@@ -1,22 +1,22 @@
 /* Base Colors */
 :root {
-  --solar-yellow: #ffb81c; /* Vibrant Solar Yellow for highlights */
+  --solar-yellow: #ffb81c; /* Vibrant Solar Yellow for highlights (from the first set) */
   --sky-blue: #00a9e0; /* Bright, clear Sky Blue for buttons and links */
-  --fresh-green: #4caf50; /* Natural Fresh Green for positive actions */
+  --fresh-green: #4caf50; /* Natural Fresh Green for positive actions (common to both sets) */
   --charcoal-gray: #212121; /* Deep Charcoal Gray for primary text */
   --off-white: #fafafa; /* Clean, soft Off-White for backgrounds */
-  --white: #ffffff; /* Crisp, clean White for backgrounds and accents */
+  --white: #ffffff; /* Crisp, clean White for backgrounds and accents (common to both sets) */
   --light-gray: #e0e0e0; /* Light Gray for borders, dividers, and secondary backgrounds */
   --light-orange: #ff7043; /* Muted, warm Orange for hover effects */
   --deep-blue: #003366; /* Rich Deep Blue for headers, footers, and contrasts */
   --dark-green: #2c6e49; /* Strong Dark Green for secondary buttons */
   --sky-gray: #d1e2f0; /* Soft Sky Gray for secondary section backgrounds */
   --hover-blue: #007bff; /* Hover Blue for interactive elements */
-  --hover-yellow: #ff9f1c; /* Warm Hover Yellow for attention-grabbing actions */
+  --hover-yellow: #ffeb3b; /* Hover Yellow for attention-grabbing actions (from the second set) */
   --hover-gray: #a3a3a3; /* Subtle Hover Gray for buttons */
   --primary-text: #212121; /* Dark Charcoal for body text, easy to read */
   --secondary-text: #757575; /* Lighter gray for secondary or less important text */
-  --highlight-text: #ffb81c; /* Solar Yellow for key highlights and call-to-action */
+  --highlight-text: #f9a825; /* Solar Yellow for key highlights and call-to-action (from the second set) */
   --main-bg: #fafafa; /* Light off-white background to create a fresh atmosphere */
   --section-bg: #ffffff; /* Clean, white background for content sections */
   --footer-bg: #212121; /* Dark footer background for contrast */
@@ -291,4 +291,46 @@ body {
   .values .col-md-4 {
     margin-bottom: 2rem;
   }
+}
+
+.services-section {
+  background-color: #f9f9f9;
+  padding: 3rem 0;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.service-description {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
 }

@@ -167,3 +167,45 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Services Section Animation
+  gsap.from(".services-section .section-heading", {
+    opacity: 0,
+    y: -30,
+    duration: 1,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".services-section",
+      start: "top center",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  gsap.from(".services-section .service-card", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".services-section",
+      start: "top center",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  // Hover effect for service cards
+  gsap.utils.toArray(".service-card").forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, { y: -10, duration: 0.2, ease: "power2.out" });
+    });
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, { y: 0, duration: 0.2, ease: "power2.out" });
+    });
+  });
+});
