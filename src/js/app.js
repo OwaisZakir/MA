@@ -209,3 +209,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// ==============================
+// Ensure the DOM is fully loaded before executing
+document.addEventListener("DOMContentLoaded", function () {
+  // GSAP ScrollTrigger for portfolio section heading and subheading
+  gsap.from(".portfolio-main-heading", {
+    opacity: 0,
+    y: -50,
+    duration: 1.5,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".portfolio-section",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  gsap.from(".portfolio-subheading", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".portfolio-section",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  // GSAP Hover effect for the cards
+  gsap.utils.toArray(".portfolio-card").forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+    });
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, { scale: 1, duration: 0.3, ease: "power2.out" });
+    });
+  });
+});

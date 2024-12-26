@@ -334,3 +334,67 @@ body {
 .mb-4 {
   margin-bottom: 1.5rem;
 }
+
+
+/* ========================= */
+
+
+/* Styling for Portfolio Section */
+.portfolio-section {
+  background-color: #f8f9fa;
+}
+
+.portfolio-heading {
+  margin-bottom: 40px;
+}
+
+.portfolio-main-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.portfolio-subheading {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Styling for Portfolio Cards */
+.portfolio-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card-body {
+  padding: 20px;
+}
+
+.portfolio-card-title {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.portfolio-card-text {
+  color: #555;
+}
+
+/* Hover effects */
+.portfolio-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card:hover .portfolio-card-img {
+  transform: scale(1.05);
+}
