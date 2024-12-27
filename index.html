@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
     <!-- Bootstrap 5 CSS -->
     <link
@@ -24,9 +28,11 @@
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand d-flex gap-2" href="#">
         <!-- Logo -->
-        <img src="logo.png" alt="Logo" width="40" height="40" />
+        <!-- <img src="logo.png" alt="Logo" width="40" height="40" /> -->
+
+        <h4 class="fw-bold">MA Solar Energy</h4>
       </a>
       <button
         class="navbar-toggler"
@@ -45,9 +51,15 @@
           <li class="nav-item">
             <a class="nav-link" href="#about-us">About</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Contact</a>
+          </li>
         </ul>
         <form class="d-flex">
           <!-- Search Bar -->
@@ -253,8 +265,7 @@
         </div>
       </div>
     </section>
-    <hr />
-    <hr />
+
     <!-- =========================== -->
 
     <!-- Main Content -->
@@ -383,14 +394,601 @@
       </div>
     </section>
 
-    <!-- Some placeholder content -->
-    <section style="height: 100vh; width: 100vw"></section>
+    <!-- ================================ -->
 
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-5">
+      <div class="container">
+        <div class="faq-heading text-center mb-4">
+          <h1 class="faq-main-heading">Frequently Asked Questions</h1>
+          <p class="faq-subheading">
+            Find answers to common questions about our solar installations and
+            services.
+          </p>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion" id="faqAccordion">
+          <!-- FAQ Item 1 -->
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  What are the benefits of solar energy?
+                  <i class="fas fa-plus-circle"></i>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="card-body">
+                Solar energy is renewable, reduces electricity bills, has low
+                maintenance costs, and is environmentally friendly.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  How much can I save with solar panels?
+                  <i class="fas fa-plus-circle"></i>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="card-body">
+                Savings depend on various factors including the size of the
+                system, energy consumption, and local electricity rates.
+                Typically, solar panels can reduce your electricity bill by
+                50-75%.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  What maintenance do solar panels require?
+                  <i class="fas fa-plus-circle"></i>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseThree"
+              class="collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="card-body">
+                Solar panels require minimal maintenance. It's recommended to
+                clean them periodically to remove dust and debris and ensure
+                optimal performance.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  How long do solar panels last?
+                  <i class="fas fa-plus-circle"></i>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseFour"
+              class="collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="card-body">
+                Solar panels typically last between 25-30 years. Their
+                efficiency gradually decreases over time.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                >
+                  Can I install solar panels myself?
+                  <i class="fas fa-plus-circle"></i>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseFive"
+              class="collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="card-body">
+                While DIY solar panel kits are available, it's recommended to
+                have a professional installation to ensure safety and
+                efficiency.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button
+                  class="btn btn-link btn-block text-left collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  How do solar panels work?
+                  <i class="fas fa-plus-circle"></i>
+                </button>
+              </h2>
+            </div>
+            <div
+              id="collapseSix"
+              class="collapse"
+              aria-labelledby="headingSix"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="card-body">
+                Solar panels convert sunlight into electricity using
+                photovoltaic (PV) cells. The electricity can be used
+                immediately, stored in batteries, or fed back into the grid.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ -->
+
+    <section id="blog" class="blog-section py-5">
+      <div class="container">
+        <!-- Blog Heading -->
+        <div class="blog-heading text-center mb-5">
+          <h1 class="blog-main-heading">Our Latest Blog Posts</h1>
+          <p class="blog-subheading">
+            Stay informed with the latest updates and trends in the world of
+            solar energy.
+          </p>
+        </div>
+
+        <!-- Blog Cards (Multiple Blog Posts) -->
+        <div class="row">
+          <!-- Blog Post 1 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 1"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">The Future of Solar Power</h5>
+                <p class="blog-card-text">
+                  An in-depth look at how solar energy is shaping the future of
+                  sustainable energy. Discover the long-term benefits of
+                  adopting solar solutions.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 2"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">
+                  How Solar Panels Help the Environment
+                </h5>
+                <p class="blog-card-text">
+                  Learn about the environmental benefits of solar energy. Solar
+                  panels help reduce carbon emissions and minimize reliance on
+                  fossil fuels.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 3"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">
+                  DIY Solar Panel Installation: Pros and Cons
+                </h5>
+                <p class="blog-card-text">
+                  Considering installing solar panels yourself? This post will
+                  help you decide if it's the right choice for your home.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 4 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 4"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">
+                  How to Choose the Right Solar Panel System
+                </h5>
+                <p class="blog-card-text">
+                  Selecting the right solar system for your home can be
+                  daunting. Here’s a guide to help you make an informed decision
+                  based on your energy needs.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 5 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 5"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">Top 5 Myths About Solar Energy</h5>
+                <p class="blog-card-text">
+                  There are many misconceptions about solar power. Let's bust
+                  the top 5 myths surrounding solar energy and get the facts
+                  right.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 6 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 6"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">Solar Panel Maintenance Tips</h5>
+                <p class="blog-card-text">
+                  To keep your solar panels running efficiently, regular
+                  maintenance is essential. Here’s a list of tips to help you
+                  take care of your system.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 7 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 7"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">The Economics of Solar Energy</h5>
+                <p class="blog-card-text">
+                  Understand how solar energy can save you money in the long
+                  run. Learn about the economic benefits of going solar and the
+                  ROI.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 8 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 8"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">
+                  The Impact of Solar Energy on Grid Systems
+                </h5>
+                <p class="blog-card-text">
+                  Explore how solar energy integrates with national and local
+                  grid systems, and the impact it has on the way energy is
+                  distributed.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 9 -->
+          <div class="col-lg-4 col-md-6 mb-4 blog-post">
+            <div class="blog-card">
+              <img
+                src="https://via.placeholder.com/350"
+                alt="Blog Post 9"
+                class="blog-card-img"
+              />
+              <div class="blog-card-body">
+                <h5 class="blog-card-title">
+                  Solar Energy for Small Businesses
+                </h5>
+                <p class="blog-card-text">
+                  How can small businesses benefit from solar energy? Learn how
+                  installing solar can lower costs and improve sustainability.
+                </p>
+                <a href="#" class="blog-card-link">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== -->
+
+    <section id="contact-us" class="contact-us">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-form-container">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h3>We'd Love to Hear from You</h3>
+            <p>
+              Got questions about solar installation or need support? Reach out
+              to us, and our team will assist you promptly!
+            </p>
+            <p><strong>Email:</strong> info@solarpower.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form id="contact-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-field">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Enter your full name"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Enter your email address"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Write your message"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+            <!-- Success or Error Messages -->
+            <div
+              id="thank-you-message"
+              class="thank-you-message"
+              style="display: none"
+            >
+              <h3>Thank You!</h3>
+              <p>
+                Your message has been sent successfully. We'll get back to you
+                shortly.
+              </p>
+            </div>
+            <div id="error-message" class="error-message" style="display: none">
+              <h3>Oops!</h3>
+              <p>Something went wrong. Please try again.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- Footer Logo & Info -->
+          <div class="col-md-3 col-12 mb-4" id="footer-logo">
+            <img
+              src="path/to/your/logo.png"
+              alt="Solar Power Logo"
+              class="footer-logo img-fluid mb-3"
+            />
+            <p>Providing reliable solar solutions for a sustainable future.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-3 col-12 mb-4" id="footer-links">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
+              <li><a href="#blog" class="footer-link">Blog</a></li>
+              <li><a href="#contact-us" class="footer-link">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-3 col-12 mb-4" id="footer-contact">
+            <h5>Contact Us</h5>
+            <p>
+              Email:
+              <a href="mailto:info@solarpower.com" class="footer-link"
+                >info@solarpower.com</a
+              >
+            </p>
+            <p>Phone: (123) 456-7890</p>
+            <!-- WhatsApp and Call Icons -->
+            <div class="contact-icons">
+              <a
+                href="https://wa.me/1234567890"
+                class="whatsapp-icon"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+              <a href="tel:+1234567890" class="call-icon">
+                <i class="fas fa-phone-alt"></i> Call Us
+              </a>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-md-3 col-12 mb-4" id="footer-social">
+            <h5>Follow Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  class="footer-link"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  class="footer-link"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  class="footer-link"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  class="footer-link"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom text-center mt-4" id="footer-bottom">
+          <p>&copy; 2024 Solar Power Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Some placeholder content -->
+    <!-- <section style="height: 100vh; width: 100vw"></section> -->
+    <!-- Additional Features -->
     <!-- Bootstrap JS Bundle (includes Bootstrap's JS and Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- GSAP Library (for animations) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollToPlugin.min.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="./src/js/app.js"></script>

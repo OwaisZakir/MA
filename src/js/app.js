@@ -250,3 +250,191 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  // GSAP ScrollTrigger for FAQ section heading and subheading
+  gsap.from(".faq-main-heading", {
+    opacity: 0,
+    y: -50,
+    duration: 1.5,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".faq-section",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  gsap.from(".faq-subheading", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".faq-section",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  // GSAP ScrollTrigger for FAQ cards
+  gsap.from(".card", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    stagger: 0.3,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".faq-section",
+      start: "top center",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  // GSAP Hover effect for the cards
+  gsap.utils.toArray(".card").forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      gsap.to(card, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+    });
+    card.addEventListener("mouseleave", () => {
+      gsap.to(card, { scale: 1, duration: 0.3, ease: "power2.out" });
+    });
+  });
+});
+
+// ==================================
+
+// GSAP Animations for Blog Section
+document.addEventListener("DOMContentLoaded", function () {
+  // GSAP ScrollTrigger for blog section heading and subheading
+  gsap.from(".blog-main-heading", {
+    opacity: 0,
+    y: -50,
+    duration: 1.5,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".blog-section",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  gsap.from(".blog-subheading", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".blog-section",
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+  });
+
+  // GSAP ScrollTrigger for blog cards with stagger effect
+  gsap.from(".blog-post", {
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    stagger: 0.3,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: ".blog-section",
+      start: "top center",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+});
+
+// ========================
+
+function handleFormSubmit(event) {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
+
+  // Get form values (optional, for logging or custom handling)
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Here you can add the logic for sending the form data (e.g., via AJAX or an API)
+
+  // Show the success message and hide the form
+  document.getElementById("thank-you-message").style.display = "block";
+  document.getElementById("contact-form").style.display = "none";
+
+  // Optionally, you can hide the thank you message after a few seconds
+  setTimeout(function () {
+    document.getElementById("thank-you-message").style.display = "none";
+    // Reset the form and show it again
+    document.getElementById("contact-form").style.display = "block";
+    document.getElementById("contact-form").reset();
+  }, 5000); // Hide after 5 seconds
+
+  // Simulating an error condition for demonstration (optional)
+  // Uncomment the following code to show an error message instead of success.
+
+  document.getElementById("error-message").style.display = "block";
+  document.getElementById("contact-form").style.display = "none";
+}
+
+// ============================
+
+// GSAP Animation for Footer
+window.addEventListener("load", function () {
+  gsap.from("#footer-logo", {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from("#footer-links", {
+    opacity: 0,
+    x: -100,
+    duration: 1,
+    delay: 0.3,
+    ease: "power3.out",
+  });
+
+  gsap.from("#footer-contact", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    delay: 0.6,
+    ease: "power3.out",
+  });
+
+  gsap.from("#footer-social", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    delay: 0.9,
+    ease: "power3.out",
+  });
+
+  gsap.from("#footer-bottom", {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    delay: 1.2,
+    ease: "power3.out",
+  });
+
+  // Animating WhatsApp and Call Icons
+  gsap.from(".contact-icons a", {
+    opacity: 0,
+    y: 20,
+    stagger: 0.2,
+    duration: 1,
+    delay: 1.5,
+    ease: "power3.out",
+  });
+});
